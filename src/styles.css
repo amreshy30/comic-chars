@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.ngx-pagination {
+  padding: 0 !important;
+}
+.ngx-pagination .current {
+  color: black !important;
+  background-color: #4caf50 !important;
+} 
+

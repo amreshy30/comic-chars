@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand text-white" routerLink="/home">
+      Comic Book <span class="text-success">Characters</span>
+    </a>
+
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-toggle="collapse"
+      data-target="#_navbar"
+    >
+      <span class="material-icons text-success">menu</span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="_navbar">
+      <ul class="navbar-nav text-right">
+        <li class="nav-item border-bottom border-success w-50 ml-auto">
+          <a
+            class="nav-link"
+            routerLink="/home"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+          >
+            Home
+          </a>
+        </li>
+        <li class="nav-item border-bottom border-success w-50 ml-auto">
+          <a
+            class="nav-link"
+            routerLink="/characters"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+          >
+            Characters
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- contact modal -->
+<div
+  class="modal"
+  id="contact"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="contact"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <span
+          class="material-icons text-white close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          close
+        </span>
+      </div>
+      <div class="modal-body text-center">
+        <p>Website by Daniel C. Cardona</p>
+        <a
+          href="http://danielccardona.my-board.org/"
+          target="_blank"
+          class="text-success"
+          >Portafolio</a
+        >
+        <br />
+        <a
+          href="https://github.com/daniellcc/comic-maniak"
+          target="_blank"
+          class="text-success"
+        >
+          Github
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

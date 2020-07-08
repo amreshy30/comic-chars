@@ -1,0 +1,51 @@
+<div class="text-center text-white">
+  <article class="mb-5">
+    <header>
+      <h4>Welcome!</h4>
+    </header>
+    <p>See some members of the comic world</p>
+  </article>
+
+  <article class="card bg-dark mb-5" *ngIf="characters">
+    <div class="card-body">
+      <header>
+        <h5>Characters list available</h5>
+      </header>
+
+      <table class="table table-sm text-left">
+        <thead class="bg-success">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Universe</th>
+            <th scope="col">...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let character of characters">
+            <td>{{ character.name }}</td>
+            <td>{{ character.publisher.name }}</td>
+            <td>...</td>
+          </tr>
+        </tbody>
+      </table>
+      <button
+        class="btn btn-raised btn-success btn-sm"
+        routerLink="/characters"
+      >
+        See full list
+      </button>
+    </div>
+  </article>
+
+  <article class="card bg-dark">
+    <div class="card-body">
+      <header>
+        <h5>Look info about this page</h5>
+      </header>
+
+      <button class="btn btn-raised btn-success btn-sm" routerLink="/about">
+        About
+      </button>
+    </div>
+  </article>
+</div>

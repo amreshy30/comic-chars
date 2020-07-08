@@ -1,0 +1,26 @@
+<div class="card bg-dark text-white" *ngIf="character">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card-img">
+        <img class="card-img-top" src="{{ character.image.medium_url }}" alt="character image">
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="card-body">
+        <h5>{{ character.name }}</h5>
+        <p><span class="text-success">Real name</span>:  {{ character.real_name }}</p>
+
+        <p><span class="text-success">Universe</span>: {{ character.publisher.name }}</p>
+        
+        <p *ngIf="character.origin; else originNull">
+          <span class="text-success">Origin</span>: {{ character.origin.name }}
+        </p>
+        <ng-template #originNull>
+          <p><span class="text-success">Origin</span>: Unknow</p>
+        </ng-template>
+        
+        <p><span class="text-success">Description</span>: {{ character.deck }}</p>
+      </div>
+    </div>
+  </div>
+</div>

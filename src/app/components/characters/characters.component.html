@@ -1,0 +1,46 @@
+<h5 class="text-white text-center">Characters list</h5>
+
+<div *ngIf="characters; else noAvailable">
+  <table class="table table-sm table-hover text-white">
+    <thead class="bg-success">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Universe</th>
+        <th scope="col">Origin</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        style="cursor: pointer;"
+        (click)="toCharacter(character)"
+        *ngFor="
+          let character of characters
+            | paginate
+              : {
+                  itemsPerPage: 10,
+                  currentPage: currentP,
+                  totalItems: characters.length
+                }
+        "
+      >
+        <td>{{ character.name }}</td>
+        <td>{{ character.publisher.name }}</td>
+        <td *ngIf="character.origin; else originNull">
+          {{ character.origin.name }}
+        </td>
+        <ng-template #originNull><td>Unknow</td></ng-template>
+      </tr>
+    </tbody>
+  </table>
+
+  <pagination-controls
+    (pageChange)="currentP = $event"
+    [responsive]="true"
+    class="d-flex justify-content-center"
+  >
+  </pagination-controls>
+</div>
+
+<ng-template #noAvailable>
+  <h5 class="text-white text-center">An error has occurred, try later</h5>
+</ng-template>

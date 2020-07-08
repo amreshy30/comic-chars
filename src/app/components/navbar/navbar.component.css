@@ -1,0 +1,23 @@
+@media screen and (min-width: 768px) {
+  .navbar-nav {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    text-align: center !important;
+    
+  }
+  .navbar-nav > .nav-item {
+    border-color: transparent !important;
+  }
+
+  .nav-item:hover {
+    transition: .1s ease-in-out !important;
+    background-color: rgb(76, 175, 80) !important;
+  }
+  .nav-item:hover > a {
+    transition: inherit !important;
+    color: #424242 !important;
+  }
+}
+
+  
